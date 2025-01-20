@@ -299,15 +299,15 @@ app.listen(process.env.PORT, () => {...}
 ```
 
 ### 배열 타입
-배열 타입은 제네릭 구문으로 정의해야 합니다 ([eslint rule](https://typescript-eslint.io/rules/array-type/#generic)).
+배열 타입은 배열 리터럴 구문으로 정의해야 합니다 ([eslint rule](https://typescript-eslint.io/rules/array-type/#generic)).
 ``` typescript
 // ❌ Avoid
-const x: string[] = ['foo', 'bar'];
-const y: readonly string[] = ['foo', 'bar'];
-
-// ✅ Use
 const x: Array<string> = ['foo', 'bar'];
 const y: ReadonlyArray<string> = ['foo', 'bar'];
+
+// ✅ Use
+const x: string[] = ['foo', 'bar'];
+const y: readonly string[] = ['foo', 'bar'];
 ```
 
 ### 서비스
